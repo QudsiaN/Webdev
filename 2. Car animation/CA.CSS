@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+   
+    
+}
+body{
+    overflow: hidden;
+    animation: screen 20s ;
+    animation-iteration-count: infinite;
+    animation-direction: linear;
+
+}
+.sky {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(img/background.jpg);
+    background-repeat: no-repeat;
+    background-position: cover;
+    position: absolute;
+
+}
+
+.tree {
+    background-image: url(img/trees.png);
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-position: cover;
+    bottom: 60px;
+}
+
+.track {
+    background-image: url(img/track.png);
+    height: 100vh;
+    width: 200vw;
+    background-repeat: repeat-x;
+    position: absolute;
+    background-position: bottom;
+    top: 20px;
+    animation: trackmove 20s ;
+    animation-iteration-count: infinite;
+        animation-direction: linear;
+}
+
+
+
+
+.car {
+    background-image: url(img/car_body.png);
+    height: 300px;
+    width: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 360px;
+    left: 400px;
+    animation-name:shake;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: linear
+    }
+
+   
+
+.rear {
+    width: 80px;
+    height: 100%;
+    position: relative;
+    top: 115px;
+    left: 132px;
+    }
+
+    .rear img{    animation-name:wheelrotate;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: linear;}
+
+.front {
+    width: 80px;
+    height: 100%;
+    position: relative;
+    left: 647px;
+    bottom: 181px;
+   
+}
+.front img{
+    animation-name:wheelrotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: linear;
+}
+@keyframes wheelrotate{
+
+    100%{transform:rotate(360deg);}
+}
+
+@keyframes trackmove{
+    100%{transform: translatex(-500px);}}
+
+@keyframes shake{
+    0%{transform: translatex(-100px);}
+    50%{transform: translatex(100px);}
+    100%{transform: translatex(-100px);}
+
+
+
+}
+
+@keyframes screen{
+    0%{transform: translatey(-50px);}
+    50%{transform: translatey(50px);}
+    100%{transform: translatey(-50px);}
+}
